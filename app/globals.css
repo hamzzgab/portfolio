@@ -24,7 +24,8 @@ html.light ::selection {
 }
 html.light body::before,
 html.light body::after {
-  opacity: 0.08;
+  opacity: 0.15;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230d9488' stroke-width='0.5'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z'/%3E%3Cpath d='M40 10L70 40L40 70L10 40Z'/%3E%3Cpath d='M40 20L60 40L40 60L20 40Z'/%3E%3Cpath d='M0 0L40 0L40 40L0 40Z'/%3E%3Cpath d='M40 0L80 0L80 40L40 40Z'/%3E%3Cpath d='M0 40L40 40L40 80L0 80Z'/%3E%3Cpath d='M40 40L80 40L80 80L40 80Z'/%3E%3C/g%3E%3C/svg%3E");
 }
 html.light .content-elevated {
   background-color: #fafafa;
@@ -60,6 +61,11 @@ html.light .animate-spin-slow svg path {
 html.light .bg-teal-400\/10 { background-color: rgba(13, 148, 136, 0.1); }
 html.light .text-teal-400\/60 { color: rgba(13, 148, 136, 0.6); }
 html.light .text-teal-400\/80 { color: rgba(13, 148, 136, 0.8); }
+
+/* Light mode mandala — much brighter */
+html.light .animate-spin-slow {
+  opacity: 0.35 !important;
+}
 
 /* Islamic geometric tile pattern — left gutter, fades towards centre */
 body::before {
