@@ -1,4 +1,8 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="32" height="32" rx="6" fill="#0a0a0a"/>
-  <text x="5" y="23" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="#2dd4bf">HG</text>
+  <rect x="1" y="1" width="30" height="30" rx="5" stroke="#2dd4bf" stroke-width="0.5" fill="none" opacity="0.3"/>
+  <!-- H -->
+  <path d="M6 8v16M6 16h7M13 8v16" stroke="#2dd4bf" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- G -->
+  <path d="M24 12.5a5.5 5.5 0 1 0 0 7M24 16h-2.5" stroke="#2dd4bf" stroke-width="2.2" stroke-linecap="round" fill="none"/>
 </svg>

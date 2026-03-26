@@ -39,7 +39,10 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/portfolio/icon.svg",
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
   },
 };
 
