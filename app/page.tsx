@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="content-elevated max-w-2xl mx-auto bg-[#0a0a0a]">
+      <main className="content-elevated max-w-2xl mx-auto">
         <Hero />
         <About />
         <Experience />
