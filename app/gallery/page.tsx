@@ -29,19 +29,19 @@ export default function Gallery() {
       <h1 className="text-3xl font-bold text-foreground mb-10 tracking-tight">
         Certificates
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
         {certificates.map((cert, i) => (
           <motion.div
             key={cert}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="rounded-lg border border-border overflow-hidden hover:border-border-hover transition-colors"
+            className="break-inside-avoid rounded-lg border border-border overflow-hidden hover:border-border-hover transition-colors"
           >
             <img
               src={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/certificates/${cert}`}
               alt={cert.replace(/[._]/g, " ").replace("webp", "").trim()}
-              className="w-full aspect-[4/3] object-contain bg-white"
+              className="w-full h-auto"
               loading="lazy"
             />
           </motion.div>
