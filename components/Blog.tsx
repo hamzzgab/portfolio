@@ -5,17 +5,17 @@ import SectionHeading from "./SectionHeading";
 
 export default function Blog() {
   return (
-    <section id="blog" className="px-6 py-20 max-w-3xl mx-auto">
+    <section id="blog" className="px-6 py-24 max-w-2xl mx-auto">
       <SectionHeading>Writing</SectionHeading>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="p-6 rounded-lg border border-dashed border-border text-center"
+        className="text-xs text-zinc-600"
       >
-        <p className="text-muted text-sm">Coming soon.</p>
-      </motion.div>
+        Coming soon.
+      </motion.p>
     </section>
   );
 }

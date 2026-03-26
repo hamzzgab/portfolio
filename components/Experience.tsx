@@ -6,38 +6,34 @@ import { experiences } from "@/data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 py-20 max-w-3xl mx-auto">
+    <section id="experience" className="px-6 py-24 max-w-2xl mx-auto">
       <SectionHeading>Experience</SectionHeading>
-      <div className="space-y-12">
+      <div className="space-y-16">
         {experiences.map((exp, i) => (
           <motion.div
             key={exp.company}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="relative pl-6 border-l border-border"
+            className="flex flex-col sm:flex-row gap-1 sm:gap-12"
           >
-            <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-foreground" />
-            <div className="mb-3">
-              <h3 className="text-lg font-semibold text-foreground">
-                {exp.company}
-              </h3>
-              <p className="text-sm text-muted">
-                {exp.role} &middot; {exp.period}
-              </p>
-              <p className="text-sm text-muted">{exp.location}</p>
+            <div className="sm:w-40 shrink-0">
+              <p className="text-xs text-zinc-600">{exp.period}</p>
             </div>
-            <ul className="space-y-3">
-              {exp.bullets.map((bullet, j) => (
-                <li
-                  key={j}
-                  className="text-sm text-muted leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-border before:rounded-full"
-                >
-                  {bullet}
-                </li>
-              ))}
-            </ul>
+            <div className="flex-1">
+              <h3 className="text-sm font-medium text-zinc-200">{exp.company}</h3>
+              <p className="text-xs text-zinc-500 mb-4">
+                {exp.role} &middot; {exp.location}
+              </p>
+              <ul className="space-y-3">
+                {exp.bullets.map((bullet, j) => (
+                  <li key={j} className="text-xs text-zinc-500 leading-relaxed">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         ))}
       </div>

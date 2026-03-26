@@ -5,75 +5,79 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-[85vh] flex flex-col justify-center px-6 max-w-3xl mx-auto">
+    <section className="min-h-screen flex flex-col justify-center px-6 max-w-2xl mx-auto relative overflow-hidden">
+      {/* Rotating mandala */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.07 }}
+        transition={{ duration: 2, delay: 0.5 }}
+        aria-hidden="true"
+        className="absolute left-[65%] top-1/2 animate-spin-slow pointer-events-none select-none"
+      >
+        <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="140" cy="140" r="138" stroke="#2dd4bf" strokeWidth="0.5" />
+          <circle cx="140" cy="140" r="110" stroke="#2dd4bf" strokeWidth="0.5" />
+          <circle cx="140" cy="140" r="80" stroke="#2dd4bf" strokeWidth="0.5" />
+          <circle cx="140" cy="140" r="50" stroke="#2dd4bf" strokeWidth="0.5" />
+          <circle cx="140" cy="140" r="20" stroke="#2dd4bf" strokeWidth="0.5" />
+          {/* 12 petal lines */}
+          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle) => (
+            <line
+              key={angle}
+              x1="140"
+              y1="140"
+              x2={140 + 138 * Math.cos((angle * Math.PI) / 180)}
+              y2={140 + 138 * Math.sin((angle * Math.PI) / 180)}
+              stroke="#2dd4bf"
+              strokeWidth="0.3"
+            />
+          ))}
+          {/* Inner diamond petals */}
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => {
+            const r1 = 50, r2 = 110;
+            const a = (angle * Math.PI) / 180;
+            const aOff = ((angle + 22.5) * Math.PI) / 180;
+            const aOff2 = ((angle - 22.5) * Math.PI) / 180;
+            return (
+              <path
+                key={`petal-${angle}`}
+                d={`M ${140 + r1 * Math.cos(a)} ${140 + r1 * Math.sin(a)} Q ${140 + r2 * 0.7 * Math.cos(aOff)} ${140 + r2 * 0.7 * Math.sin(aOff)} ${140 + r2 * Math.cos(a)} ${140 + r2 * Math.sin(a)} Q ${140 + r2 * 0.7 * Math.cos(aOff2)} ${140 + r2 * 0.7 * Math.sin(aOff2)} ${140 + r1 * Math.cos(a)} ${140 + r1 * Math.sin(a)}`}
+                stroke="#2dd4bf"
+                strokeWidth="0.4"
+                fill="none"
+              />
+            );
+          })}
+        </svg>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        className="relative z-10"
       >
-        <p className="text-muted text-sm mb-3 tracking-wide uppercase">
-          Software Development Engineer
-        </p>
-        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-foreground mb-6">
-          Hamza Gabajiwala
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 mb-3">
+          Hamza
+          <br />
+          Gabajiwala
         </h1>
-        <p className="text-muted text-lg leading-relaxed max-w-2xl mb-8">
-          Building large-scale data pipelines and audience targeting systems at{" "}
-          <span className="text-foreground font-medium">Yahoo</span>. Working
-          with Spark, Airflow, and Kafka on AWS to process audience segments for
-          programmatic advertising at scale. Recently integrating GenAI/LLM
-          capabilities into search retargeting pipelines.
+        <p className="text-zinc-500 text-sm mb-6">
+          Software Development Engineer at <span className="text-teal-400/80">Yahoo</span>
         </p>
-        <div className="flex items-center gap-5 text-muted">
-          <a
-            href="https://github.com/hamzzgab"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
-            GitHub
-          </a>
-          <span className="text-border">|</span>
-          <a
-            href="https://www.linkedin.com/in/hamza-gabajiwala"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
-            LinkedIn
-          </a>
-          <span className="text-border">|</span>
-          <a
-            href="https://leetcode.com/hamzajg16_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
-            LeetCode
-          </a>
-          <span className="text-border">|</span>
-          <a
-            href="mailto:hamzajg16@gmail.com"
-            className="hover:text-foreground transition-colors"
-          >
-            Email
-          </a>
-          <span className="text-border">|</span>
-          <a
-            href={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/resume.pdf`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground transition-colors"
-          >
-            Resume
-          </a>
-          <span className="text-border">|</span>
-          <Link
-            href="/gallery"
-            className="hover:text-foreground transition-colors"
-          >
-            Certificates
-          </Link>
+        <p className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-10">
+          Building large-scale data pipelines and audience targeting systems at
+          Yahoo. Working with Spark, Airflow, and Kafka on AWS to process
+          audience segments for programmatic advertising at scale. Recently
+          integrating GenAI/LLM capabilities into search retargeting pipelines.
+        </p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500">
+          <a href="https://github.com/hamzzgab" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/hamza-gabajiwala" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">LinkedIn</a>
+          <a href="https://leetcode.com/hamzajg16_" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">LeetCode</a>
+          <a href="mailto:hamzajg16@gmail.com" className="hover:text-teal-400 transition-colors">Email</a>
+          <a href={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/resume.pdf`} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">Resume</a>
+          <Link href="/gallery" className="hover:text-teal-400 transition-colors">Certificates</Link>
         </div>
       </motion.div>
     </section>

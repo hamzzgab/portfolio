@@ -12,18 +12,20 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Publications />
-      <LeetCode />
-      <Education />
-      <CurrentWork />
-      <Blog />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Publications />
+        <LeetCode />
+        <Education />
+        <CurrentWork />
+        <Blog />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

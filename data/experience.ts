@@ -13,12 +13,12 @@ export const experiences: Experience[] = [
     period: "February 2024 — Present",
     location: "Dublin, Ireland",
     bullets: [
-      "Architected 10+ Apache Airflow DAGs orchestrating Spark/PySpark batch scoring pipelines on AWS EMR, processing 1.28B+ daily events across 400+ audience segments to power Yahoo DSP's programmatic ad targeting for hundreds of millions of users.",
-      "Led the Accelerated Audience Activation initiative, designing Kafka (MSK) streaming and sensor-based orchestration to cut audience segment freshness from days to under 24 hours within a 6-hour SLA, enabling near-real-time ad targeting across 480+ live segments.",
-      "Shipped the Yahoo Standard Audiences GA release, building the OpenSearch rules upload pipeline and URL mapping aggregation DAG that improved 400+ audience segment definitions, expanding potential user reach by 60% through new contextual data sources.",
-      "Migrated 4 scoring systems (MRT, PR, Rule Scoring, Premium Audiences) to new cloud infrastructure, cutting costs 13% by optimising instance types and switching from Glue catalog to direct S3 reads. Upgraded EMR to v7 and transitioned monitoring to Chronosphere for sub-minute alerting.",
-      "Designed a segment reprocessing system for the SRT pipeline to recover segments from a catalog of 113K+ IDs missed by the forward-only hourly pipeline, with a health-check DAG and Slack alerting that eliminated client-reported zero-count incidents.",
-      "Designed and shipped geo-aware audience segmentation with country/state-level restrictions and feature flag rollout. Authored the technical design for impression-based scoring using OpenSearch and windowed aggregation over 554GB+ daily data volumes.",
+      "Built 10+ Airflow DAGs processing 1.28B+ daily events across 400+ audience segments on AWS EMR.",
+      "Led Accelerated Audience Activation — cut segment freshness from days to <24 hours across 480+ live segments.",
+      "Shipped Yahoo Standard Audiences GA — OpenSearch pipeline expanding user reach by 60%.",
+      "Migrated 4 scoring systems to new infrastructure, cutting costs 13% and upgrading to EMR v7.",
+      "Designed segment reprocessing system recovering missed segments from 113K+ catalog with automated alerting.",
+      "Shipped geo-aware segmentation and authored impression-based scoring design over 554GB+ daily volumes.",
     ],
   },
   {
@@ -27,8 +27,8 @@ export const experiences: Experience[] = [
     period: "June 2021 — June 2022",
     location: "Mumbai, India",
     bullets: [
-      "Migrated 150+ test cases from Selenium to WebDriver in 14 days and integrated them into Jenkins CI/CD pipelines, cutting the manual regression cycle from hours to fully automated nightly runs.",
-      "Reduced data-collection downtime by 50% by replacing manual workflows with REST API-based ingestion, enabling same-day reporting turnaround.",
+      "Migrated 150+ test cases from Selenium to WebDriver in 14 days — manual regression to automated nightly runs.",
+      "Cut data-collection downtime by 50% with REST API ingestion, enabling same-day reporting.",
     ],
   },
 ];
