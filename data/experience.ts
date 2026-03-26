@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
     location: "Mumbai, India",
     bullets: [
       "Migrated 150+ automation test cases from Selenium to WebDriver in 14 days and automated execution via Jenkins CI/CD.",
-      'Awarded "Pat on the Back" for reducing data collection downtime by 50% through REST API integration into the test automation framework.',
+      'Reduced data collection downtime by 50% through REST API integration into the test automation framework.',
     ],
   },
 ];
