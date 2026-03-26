@@ -27,8 +27,8 @@ export const experiences: Experience[] = [
     period: "June 2021 — June 2022",
     location: "Mumbai, India",
     bullets: [
-      "Migrated 150+ automation test cases from Selenium to WebDriver in 14 days and automated execution via Jenkins CI/CD.",
-      'Reduced data collection downtime by 50% through REST API integration into the test automation framework.',
+      "Migrated 150+ automation test cases from Selenium to WebDriver in 14 days, enabling fully automated regression testing via Jenkins CI/CD pipelines.",
+      "Reduced data collection downtime by 50% by building REST API integrations for automated data fetching, replacing manual collection workflows.",
     ],
   },
 ];
