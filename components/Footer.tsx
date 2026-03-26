@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="px-6 py-12 max-w-3xl mx-auto border-t border-border">
@@ -26,6 +28,20 @@ export default function Footer() {
           >
             Email
           </a>
+          <a
+            href={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            Resume
+          </a>
+          <Link
+            href="/gallery"
+            className="hover:text-foreground transition-colors"
+          >
+            Certificates
+          </Link>
         </div>
       </div>
     </footer>

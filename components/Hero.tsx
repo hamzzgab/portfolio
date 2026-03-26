@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -57,6 +58,22 @@ export default function Hero() {
           >
             Email
           </a>
+          <span className="text-border">|</span>
+          <a
+            href={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            Resume
+          </a>
+          <span className="text-border">|</span>
+          <Link
+            href="/gallery"
+            className="hover:text-foreground transition-colors"
+          >
+            Certificates
+          </Link>
         </div>
       </motion.div>
     </section>
