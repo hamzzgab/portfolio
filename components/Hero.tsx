@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Rotating mandala */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.07 }}
+        animate={{ opacity: 0.15 }}
         transition={{ duration: 2, delay: 0.5 }}
         aria-hidden="true"
         className="absolute left-[65%] top-1/2 animate-spin-slow pointer-events-none select-none"
