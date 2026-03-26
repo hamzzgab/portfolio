@@ -41,7 +41,7 @@ export default function Gallery() {
             <img
               src={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/certificates/${cert}`}
               alt={cert.replace(/[._]/g, " ").replace("webp", "").trim()}
-              className="w-full h-auto"
+              className="w-full aspect-[4/3] object-contain bg-white"
               loading="lazy"
             />
           </motion.div>
