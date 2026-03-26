@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { assetPath } from "@/lib/basePath";
 
 const certificates = [
   "ComparativeAnalysis.webp",
@@ -39,7 +40,7 @@ export default function Gallery() {
             className="break-inside-avoid rounded-lg border border-border overflow-hidden hover:border-border-hover transition-colors"
           >
             <img
-              src={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/certificates/${cert}`}
+              src={assetPath(`/certificates/${cert}`)}
               alt={cert.replace(/[._]/g, " ").replace("webp", "").trim()}
               className="w-full h-auto"
               loading="lazy"

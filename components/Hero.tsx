@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { assetPath } from "@/lib/basePath";
 
 export default function Hero() {
   return (
@@ -76,7 +77,7 @@ export default function Hero() {
           <a href="https://www.linkedin.com/in/hamza-gabajiwala" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">LinkedIn</a>
           <a href="https://leetcode.com/hamzajg16_" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">LeetCode</a>
           <a href="mailto:hamzajg16@gmail.com" className="hover:text-teal-400 transition-colors">Email</a>
-          <a href={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/resume.pdf`} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">Resume</a>
+          <a href={assetPath("/resume.pdf")} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">Resume</a>
           <Link href="/gallery" className="hover:text-teal-400 transition-colors">Certificates</Link>
         </div>
       </motion.div>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import { assetPath } from "@/lib/basePath";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,7 @@ export default function Navbar() {
         <div className="flex items-center gap-5">
           <ThemeToggle />
           <a
-            href={`${process.env.NODE_ENV === "production" ? "/portfolio" : ""}/resume.pdf`}
+            href={assetPath("/resume.pdf")}
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-zinc-500 hover:text-teal-400 transition-colors"

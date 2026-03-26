@@ -1,10 +1,12 @@
-
-
-const isProd = process.env.NODE_ENV === "production";
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const basePath = isGitHubPages ? "/portfolio" : "";
 
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/portfolio" : "",
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },
