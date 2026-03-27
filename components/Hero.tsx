@@ -53,19 +53,11 @@ export default function Hero() {
       </motion.div>
 
       <div className="relative z-10">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
-          className="text-zinc-500 text-sm mb-4"
-        >
-          Software Development Engineer at <span className="text-teal-400/80">Yahoo</span>
-        </motion.p>
-        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 mb-6">
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
           <motion.span
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="block"
           >
             Hamza
@@ -73,7 +65,7 @@ export default function Hero() {
           <motion.span
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="block"
           >
             Gabajiwala
@@ -82,7 +74,15 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+          className="text-zinc-500 text-sm mb-6"
+        >
+          Software Development Engineer at <span className="text-teal-400/80">Yahoo</span>
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
           className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-10"
         >
           Building large-scale data pipelines and audience targeting systems at
@@ -93,7 +93,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 1.0 }}
+          transition={{ duration: 0.4, delay: 0.9 }}
           className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500"
         >
           <a href="https://github.com/hamzzgab" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">GitHub</a>
