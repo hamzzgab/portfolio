@@ -39,7 +39,7 @@ export default function InlineCounter({
   const display = decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toString();
 
   return (
-    <span ref={ref} className="text-teal-400 font-semibold tabular-nums">
+    <span ref={ref} className="text-zinc-200 font-medium tabular-nums">
       {display}{suffix}
     </span>
   );
