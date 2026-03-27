@@ -57,14 +57,6 @@ html.light .animate-spin-slow svg path {
   stroke: #0d9488;
 }
 
-/* Sticky section headings */
-.section-heading-sticky {
-  background-color: #0a0a0a;
-}
-html.light .section-heading-sticky {
-  background-color: #fafafa;
-}
-
 /* Light mode section heading line */
 html.light .bg-teal-400\/10 { background-color: rgba(13, 148, 136, 0.1); }
 html.light .text-teal-400\/60 { color: rgba(13, 148, 136, 0.6); }
