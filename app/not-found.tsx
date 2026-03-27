@@ -9,23 +9,23 @@ export default function NotFound() {
       {/* Rotating mandala — behind text */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.06 }}
+        animate={{ opacity: 0.3 }}
         transition={{ duration: 2 }}
         aria-hidden="true"
-        className="absolute animate-spin-slow pointer-events-none select-none z-0 not-found-mandala"
+        className="absolute animate-spin-slow pointer-events-none select-none z-0 not-found-mandala text-teal-400"
         style={{ left: "50%", top: "50%" }}
       >
-        <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-          <circle cx="100" cy="100" r="98" stroke="currentColor" strokeWidth="0.5" />
-          <circle cx="100" cy="100" r="70" stroke="currentColor" strokeWidth="0.5" />
-          <circle cx="100" cy="100" r="40" stroke="currentColor" strokeWidth="0.5" />
+        <svg width="280" height="280" viewBox="0 0 280 280" fill="none">
+          <circle cx="140" cy="140" r="138" stroke="currentColor" strokeWidth="0.5" />
+          <circle cx="140" cy="140" r="100" stroke="currentColor" strokeWidth="0.5" />
+          <circle cx="140" cy="140" r="60" stroke="currentColor" strokeWidth="0.5" />
           {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle) => (
             <line
               key={angle}
-              x1="100"
-              y1="100"
-              x2={100 + 98 * Math.cos((angle * Math.PI) / 180)}
-              y2={100 + 98 * Math.sin((angle * Math.PI) / 180)}
+              x1="140"
+              y1="140"
+              x2={140 + 138 * Math.cos((angle * Math.PI) / 180)}
+              y2={140 + 138 * Math.sin((angle * Math.PI) / 180)}
               stroke="currentColor"
               strokeWidth="0.3"
             />
