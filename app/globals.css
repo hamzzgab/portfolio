@@ -97,10 +97,10 @@ html.light .back-to-top {
 
 /* Light mode wireframe icons */
 html.light .wireframe-icon {
-  color: rgba(13, 148, 136, 0.3);
+  color: rgba(13, 148, 136, 0.7);
 }
 html.light .wireframe-icon:hover {
-  color: rgba(13, 148, 136, 0.6);
+  color: rgba(13, 148, 136, 1);
 }
 
 /* Light mode timeline dots */

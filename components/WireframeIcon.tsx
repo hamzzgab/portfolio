@@ -93,7 +93,7 @@ export default function WireframeIcon({ icon }: { icon: string }) {
     <motion.div
       onViewportEnter={() => setVisible(true)}
       viewport={{ once: true }}
-      className="wireframe-icon w-14 h-14 text-teal-400/30 hover:text-teal-400/60 transition-colors duration-500"
+      className="wireframe-icon w-14 h-14 text-teal-400/70 hover:text-teal-400 transition-colors duration-500"
     >
       {visible && (icons[icon] || icons.cube)}
     </motion.div>
