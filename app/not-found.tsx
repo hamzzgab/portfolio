@@ -39,7 +39,7 @@ export default function NotFound() {
         transition={{ duration: 0.6 }}
         className="relative z-10 text-center"
       >
-        <h1 className="text-8xl font-bold text-zinc-800 mb-4">404</h1>
+        <h1 className="text-8xl font-bold text-zinc-300 mb-4">404</h1>
         <p className="text-zinc-500 text-sm mb-8">This page could not be found.</p>
         <Link
           href="/"
