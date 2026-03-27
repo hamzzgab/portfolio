@@ -126,7 +126,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="sm:hidden overflow-hidden bg-[#0a0a0a]/95 backdrop-blur-md border-t border-zinc-800/50"
+            className="sm:hidden overflow-hidden mobile-menu backdrop-blur-md border-t border-zinc-800/50"
           >
             <div className="px-6 py-4 space-y-3">
               {sections.map((section) => (
