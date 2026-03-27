@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { assetPath } from "@/lib/basePath";
-import AnimatedCounter from "./AnimatedCounter";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -91,7 +90,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-8"
+          className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-10"
         >
           Building large-scale data pipelines and audience targeting systems at
           Yahoo. Working with Spark, Airflow, and Flink on AWS to process
@@ -99,22 +98,10 @@ export default function Hero() {
           integrating GenAI/LLM capabilities into search retargeting pipelines.
         </motion.p>
 
-        {/* Animated counters */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.9 }}
-          className="flex gap-8 mb-10"
-        >
-          <AnimatedCounter target={1.28} suffix="B+" decimals={2} label="Daily events" duration={2000} />
-          <AnimatedCounter target={400} suffix="+" label="Audience segments" duration={2000} />
-          <AnimatedCounter target={10} suffix="+" label="Airflow DAGs" duration={1500} />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 1.1 }}
           className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500"
         >
           <a href="https://github.com/hamzzgab" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">GitHub</a>
