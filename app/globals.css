@@ -133,3 +133,19 @@ body > * {
 .animate-spin-slow {
   animation: spin-slow 60s linear infinite;
 }
+
+/* Wireframe icon 3D rotation */
+@keyframes wireframe-rotate {
+  0% { transform: perspective(200px) rotateY(0deg) rotateX(5deg); }
+  50% { transform: perspective(200px) rotateY(180deg) rotateX(-5deg); }
+  100% { transform: perspective(200px) rotateY(360deg) rotateX(5deg); }
+}
+.wireframe-spin {
+  animation: wireframe-rotate 8s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+/* Cursor glow — hide on touch/mobile */
+@media (hover: none) {
+  .cursor-glow { display: none; }
+}

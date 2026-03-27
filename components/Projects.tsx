@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import TiltCard from "./TiltCard";
+import WireframeIcon from "./WireframeIcon";
 import { projects } from "@/data/projects";
 
 export default function Projects() {
@@ -41,12 +42,17 @@ export default function Projects() {
                 <p className="text-xs text-zinc-500 leading-relaxed mb-3">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-x-2 gap-y-1">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] text-zinc-600">
-                      {tag}
-                    </span>
-                  ))}
+                <div className="flex items-end justify-between">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="text-[10px] text-zinc-600">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="wireframe-spin shrink-0 ml-2">
+                    <WireframeIcon icon={project.icon} />
+                  </div>
                 </div>
               </a>
             </TiltCard>
