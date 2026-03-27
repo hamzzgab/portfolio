@@ -135,9 +135,11 @@ export default function Navbar() {
                   href={`#${section.id}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    const el = document.getElementById(section.id);
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
-                    setTimeout(() => setMenuOpen(false), 100);
+                    setMenuOpen(false);
+                    setTimeout(() => {
+                      const el = document.getElementById(section.id);
+                      if (el) el.scrollIntoView({ behavior: "smooth" });
+                    }, 250);
                   }}
                   className={`block text-xs transition-colors ${
                     activeSection === section.id
