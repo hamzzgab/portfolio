@@ -14,8 +14,8 @@ body {
 }
 
 /* Dark mode text brightness boost */
-html.dark .text-zinc-400 { color: #d4d4d8; }  /* zinc-400 → zinc-300 */
-html.dark .text-zinc-500 { color: #a1a1aa; }  /* zinc-500 → zinc-400 */
+html.dark .text-zinc-400 { color: #e4e4e7; }  /* zinc-400 → zinc-200 */
+html.dark .text-zinc-500 { color: #d4d4d8; }  /* zinc-500 → zinc-300 */
 html.dark .text-zinc-600 { color: #a1a1aa; }  /* zinc-600 → zinc-400 */
 
 /* Light theme overrides */
