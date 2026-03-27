@@ -5,7 +5,7 @@ import Publications from "@/components/Publications";
 describe("Publications", () => {
   it("renders Publications heading", () => {
     render(<Publications />);
-    expect(screen.getByRole("heading", { name: "Publications" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Publications/ })).toBeInTheDocument();
   });
 
   it("renders both publication titles", () => {

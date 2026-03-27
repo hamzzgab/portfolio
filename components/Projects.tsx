@@ -9,7 +9,7 @@ import { projects } from "@/data/projects";
 export default function Projects() {
   return (
     <section id="projects" className="px-6 py-24 max-w-2xl mx-auto">
-      <SectionHeading>Projects</SectionHeading>
+      <SectionHeading number="03">Projects</SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projects.map((project, i) => (
           <motion.div

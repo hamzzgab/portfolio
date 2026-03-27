@@ -5,7 +5,7 @@ import Education from "@/components/Education";
 describe("Education", () => {
   it("renders Education heading", () => {
     render(<Education />);
-    expect(screen.getByRole("heading", { name: "Education" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Education/ })).toBeInTheDocument();
   });
 
   it("renders both institutions", () => {

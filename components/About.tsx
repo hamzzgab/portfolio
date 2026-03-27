@@ -7,7 +7,7 @@ import { skillCategories } from "@/data/skills";
 export default function About() {
   return (
     <section id="about" className="px-6 py-24 max-w-2xl mx-auto">
-      <SectionHeading>Skills</SectionHeading>
+      <SectionHeading number="01">Skills</SectionHeading>
       <div className="space-y-6">
         {skillCategories.map((category, catIndex) => (
           <div key={category.name}>

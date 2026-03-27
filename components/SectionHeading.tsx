@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion";
 
-export default function SectionHeading({ children }: { children: React.ReactNode }) {
+interface SectionHeadingProps {
+  children: React.ReactNode;
+  number?: string;
+}
+
+export default function SectionHeading({ children, number }: SectionHeadingProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -12,6 +17,9 @@ export default function SectionHeading({ children }: { children: React.ReactNode
       className="mb-12 sticky top-16 z-10 section-heading-sticky py-3 -mx-6 px-6"
     >
       <h2 className="text-xs font-medium text-teal-400/60 uppercase tracking-widest mb-3">
+        {number && (
+          <span className="text-teal-400/20 font-mono mr-2">{number}</span>
+        )}
         {children}
       </h2>
       <div className="h-px bg-teal-400/10" />

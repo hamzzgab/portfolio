@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 describe("Projects", () => {
   it("renders Projects heading", () => {
     render(<Projects />);
-    expect(screen.getByRole("heading", { name: "Projects" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Projects/ })).toBeInTheDocument();
   });
 
   it("renders all 4 project titles", () => {

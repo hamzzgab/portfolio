@@ -7,7 +7,7 @@ import { publications } from "@/data/publications";
 export default function Publications() {
   return (
     <section id="publications" className="px-6 py-24 max-w-2xl mx-auto">
-      <SectionHeading>Publications</SectionHeading>
+      <SectionHeading number="04">Publications</SectionHeading>
       <div className="space-y-6">
         {publications.map((pub, i) => (
           <motion.div

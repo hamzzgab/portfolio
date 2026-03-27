@@ -5,7 +5,7 @@ import Experience from "@/components/Experience";
 describe("Experience", () => {
   it("renders Experience heading", () => {
     render(<Experience />);
-    expect(screen.getByRole("heading", { name: "Experience" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Experience/ })).toBeInTheDocument();
   });
 
   it("renders both companies", () => {

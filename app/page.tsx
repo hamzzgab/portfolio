@@ -1,4 +1,6 @@
+import ScrollProgress from "@/components/ScrollProgress";
 import CursorGlow from "@/components/CursorGlow";
+import BackToTop from "@/components/BackToTop";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -13,7 +15,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <CursorGlow />
+      <BackToTop />
       <Navbar />
       <main className="content-elevated max-w-2xl mx-auto">
         <Hero />

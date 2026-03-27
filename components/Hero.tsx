@@ -52,35 +52,58 @@ export default function Hero() {
         </svg>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="relative z-10"
-      >
-        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 mb-3">
-          Hamza
-          <br />
-          Gabajiwala
-        </h1>
-        <p className="text-zinc-500 text-sm mb-6">
+      <div className="relative z-10">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="text-zinc-500 text-sm mb-4"
+        >
           Software Development Engineer at <span className="text-teal-400/80">Yahoo</span>
-        </p>
-        <p className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-10">
+        </motion.p>
+        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100 mb-6">
+          <motion.span
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="block"
+          >
+            Hamza
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="block"
+          >
+            Gabajiwala
+          </motion.span>
+        </h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-10"
+        >
           Building large-scale data pipelines and audience targeting systems at
           Yahoo. Working with Spark, Airflow, and Flink on AWS to process
           audience segments for programmatic advertising at scale. Recently
           integrating GenAI/LLM capabilities into search retargeting pipelines.
-        </p>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500">
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 1.0 }}
+          className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-500"
+        >
           <a href="https://github.com/hamzzgab" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">GitHub</a>
           <a href="https://www.linkedin.com/in/hamza-gabajiwala" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">LinkedIn</a>
           <a href="https://leetcode.com/hamzajg16_" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">LeetCode</a>
           <a href="mailto:hamzajg16@gmail.com" className="hover:text-teal-400 transition-colors">Email</a>
           <a href={assetPath("/resume.pdf")} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors">Resume</a>
           <Link href="/gallery" className="hover:text-teal-400 transition-colors">Certificates</Link>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

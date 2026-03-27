@@ -21,7 +21,7 @@ const education = [
 export default function Education() {
   return (
     <section id="education" className="px-6 py-24 max-w-2xl mx-auto">
-      <SectionHeading>Education</SectionHeading>
+      <SectionHeading number="05">Education</SectionHeading>
       <div className="space-y-10">
         {education.map((edu, i) => (
           <motion.div

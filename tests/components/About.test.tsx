@@ -5,7 +5,7 @@ import About from "@/components/About";
 describe("About", () => {
   it("renders Skills heading", () => {
     render(<About />);
-    expect(screen.getByRole("heading", { name: "Skills" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Skills/ })).toBeInTheDocument();
   });
 
   it("renders all 4 skill categories", () => {
