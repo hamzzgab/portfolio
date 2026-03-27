@@ -9,28 +9,32 @@ export default function About() {
     <section id="about" className="px-6 py-24 max-w-2xl mx-auto">
       <SectionHeading>Skills</SectionHeading>
       <div className="space-y-6">
-        {skillCategories.map((category, i) => (
-          <motion.div
-            key={category.name}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-          >
-            <h3 className="text-[11px] text-zinc-600 uppercase tracking-wider mb-2">
+        {skillCategories.map((category, catIndex) => (
+          <div key={category.name}>
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: catIndex * 0.15 }}
+              className="text-[11px] text-zinc-600 uppercase tracking-wider mb-2"
+            >
               {category.name}
-            </h3>
+            </motion.h3>
             <div className="flex flex-wrap gap-2">
-              {category.skills.map((skill) => (
-                <span
+              {category.skills.map((skill, skillIndex) => (
+                <motion.span
                   key={skill}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: catIndex * 0.15 + skillIndex * 0.05 }}
                   className="text-xs text-zinc-400 hover:text-teal-400 transition-colors"
                 >
                   {skill}
-                </span>
+                </motion.span>
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

@@ -9,7 +9,7 @@ export default function SectionHeading({ children }: { children: React.ReactNode
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="mb-12"
+      className="mb-12 sticky top-16 z-10 section-heading-sticky py-3 -mx-6 px-6"
     >
       <h2 className="text-xs font-medium text-teal-400/60 uppercase tracking-widest mb-3">
         {children}
