@@ -6,12 +6,15 @@ export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Skip on touch devices
     if (window.matchMedia("(hover: none)").matches) return;
 
     const handleMouseMove = (e: MouseEvent) => {
       if (glowRef.current) {
-        glowRef.current.style.background = `radial-gradient(300px circle at ${e.clientX}px ${e.clientY}px, rgba(45, 212, 191, 0.05), transparent 80%)`;
+        const isLight = document.documentElement.classList.contains("light");
+        const color = isLight
+          ? "rgba(13, 148, 136, 0.04)"
+          : "rgba(45, 212, 191, 0.05)";
+        glowRef.current.style.background = `radial-gradient(300px circle at ${e.clientX}px ${e.clientY}px, ${color}, transparent 80%)`;
       }
     };
 

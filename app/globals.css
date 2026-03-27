@@ -67,14 +67,44 @@ html.light .mobile-menu {
 }
 
 /* Light mode section heading line */
-html.light .bg-teal-400\/10 { background-color: rgba(13, 148, 136, 0.1); }
-html.light .text-teal-400\/60 { color: rgba(13, 148, 136, 0.6); }
-html.light .text-teal-400\/80 { color: rgba(13, 148, 136, 0.8); }
+html.light .bg-teal-400\/10 { background-color: rgba(13, 148, 136, 0.15); }
+html.light .text-teal-400\/60 { color: rgba(13, 148, 136, 0.7); }
+html.light .text-teal-400\/80 { color: rgba(13, 148, 136, 0.9); }
+html.light .text-teal-400\/20 { color: rgba(13, 148, 136, 0.3); }
 
-/* Light mode mandala — much brighter */
+/* Light mode mandala */
 html.light .animate-spin-slow {
-  opacity: 0.75 !important;
+  opacity: 0.75;
 }
+
+/* Light mode back-to-top button */
+.back-to-top {
+  border-color: rgba(45, 212, 191, 0.3);
+}
+html.light .back-to-top {
+  border-color: rgba(13, 148, 136, 0.4);
+}
+
+/* Light mode wireframe icons */
+html.light .wireframe-icon {
+  color: rgba(13, 148, 136, 0.3);
+}
+html.light .wireframe-icon:hover {
+  color: rgba(13, 148, 136, 0.6);
+}
+
+/* Light mode timeline dots */
+html.light .bg-teal-400\/40 { background-color: rgba(13, 148, 136, 0.4); }
+html.light .bg-teal-400\/15 { background-color: rgba(13, 148, 136, 0.15); }
+html.light .border-teal-400\/15 { border-color: rgba(13, 148, 136, 0.15); }
+
+/* Light mode 404 mandala */
+html.light .not-found-mandala {
+  color: #0d9488;
+}
+
+/* Light mode gallery */
+html.light .border-zinc-800 { border-color: #e4e4e7; }
 
 /* Islamic geometric tile pattern — left gutter, fades towards centre */
 body::before {
