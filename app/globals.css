@@ -19,8 +19,8 @@ html.dark .text-zinc-500 { color: #e4e4e7; }  /* zinc-500 → zinc-200 */
 html.dark .text-zinc-600 { color: #d4d4d8; }  /* zinc-600 → zinc-300 */
 
 /* Dark mode section heading visibility */
-html.dark .text-teal-400\/60 { color: rgba(45, 212, 191, 0.85); }
-html.dark .text-teal-400\/20 { color: rgba(45, 212, 191, 0.5); }
+html.dark .text-teal-400\/60 { color: rgba(45, 212, 191, 1); }
+html.dark .text-teal-400\/20 { color: rgba(45, 212, 191, 0.6); }
 html.dark .bg-teal-400\/10 { background-color: rgba(45, 212, 191, 0.2); }
 
 /* Light theme overrides */
