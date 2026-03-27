@@ -9,7 +9,7 @@ const siteUrl = "https://hamzzgab.github.io/portfolio";
 export const metadata: Metadata = {
   title: "Hamza Gabajiwala — Software Development Engineer",
   description:
-    "Software Development Engineer at Yahoo. Building large-scale data pipelines and audience targeting systems with Spark, Airflow, Kafka on AWS.",
+    "Software Development Engineer at Yahoo. Building large-scale data pipelines and audience targeting systems with Spark, Airflow, Flink on AWS.",
   keywords: [
     "Hamza Gabajiwala",
     "Software Engineer",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Yahoo",
     "Apache Spark",
     "Airflow",
-    "Kafka",
+    "Flink",
     "AWS",
     "Portfolio",
   ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hamza Gabajiwala — Software Development Engineer",
     description:
-      "Building large-scale data pipelines and audience targeting systems at Yahoo. Spark, Airflow, Kafka on AWS.",
+      "Building large-scale data pipelines and audience targeting systems at Yahoo. Spark, Airflow, Flink on AWS.",
     url: siteUrl,
     siteName: "Hamza Gabajiwala",
     locale: "en_IE",

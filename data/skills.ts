@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Data Engineering",
-    skills: ["Apache Spark", "PySpark", "Apache Airflow", "Apache Flink", "Kafka", "OpenSearch", "Avro/ORC"],
+    skills: ["Apache Spark", "PySpark", "Apache Airflow", "Apache Flink", "OpenSearch", "Avro/ORC"],
   },
   {
     name: "Cloud & DevOps",

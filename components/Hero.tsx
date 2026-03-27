@@ -68,7 +68,7 @@ export default function Hero() {
         </p>
         <p className="text-zinc-400 text-sm leading-relaxed max-w-lg mb-10">
           Building large-scale data pipelines and audience targeting systems at
-          Yahoo. Working with Spark, Airflow, and Kafka on AWS to process
+          Yahoo. Working with Spark, Airflow, and Flink on AWS to process
           audience segments for programmatic advertising at scale. Recently
           integrating GenAI/LLM capabilities into search retargeting pipelines.
         </p>

@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     location: "Dublin, Ireland",
     bullets: [
       "Built 10+ Airflow DAGs processing 1.28B+ daily events across 400+ audience segments on AWS EMR.",
-      "Led Accelerated Audience Activation — cut segment freshness from days to <24 hours across 480+ live segments.",
+      "Built multi-level segment evaluation in Flink — campaign/package/order targeting via DSP line cache and Java segment cache extensions.",
       "Shipped Yahoo Standard Audiences GA — OpenSearch pipeline expanding user reach by 60%.",
       "Migrated 4 scoring systems to new infrastructure, cutting costs 13% and upgrading to EMR v7.",
       "Designed segment reprocessing system recovering missed segments from 113K+ catalog with automated alerting.",
