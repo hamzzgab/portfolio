@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 const icons: Record<string, React.ReactNode> = {
   bird: (
     <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" strokeWidth="0.8">
@@ -84,9 +87,15 @@ const icons: Record<string, React.ReactNode> = {
 };
 
 export default function WireframeIcon({ icon }: { icon: string }) {
+  const [visible, setVisible] = useState(false);
+
   return (
-    <div className="wireframe-icon w-14 h-14 text-teal-400/30 hover:text-teal-400/60 transition-colors duration-500">
-      {icons[icon] || icons.cube}
-    </div>
+    <motion.div
+      onViewportEnter={() => setVisible(true)}
+      viewport={{ once: true }}
+      className="wireframe-icon w-14 h-14 text-teal-400/30 hover:text-teal-400/60 transition-colors duration-500"
+    >
+      {visible && (icons[icon] || icons.cube)}
+    </motion.div>
   );
 }
