@@ -17,13 +17,13 @@ describe("ThemeProvider", () => {
     localStorage.clear();
   });
 
-  it("defaults to dark theme", () => {
+  it("defaults to light theme", () => {
     render(
       <ThemeProvider>
         <ThemeConsumer />
       </ThemeProvider>
     );
-    expect(screen.getByTestId("theme")).toHaveTextContent("dark");
+    expect(screen.getByTestId("theme")).toHaveTextContent("light");
   });
 
   it("toggles to light theme", () => {
@@ -33,7 +33,7 @@ describe("ThemeProvider", () => {
       </ThemeProvider>
     );
     act(() => screen.getByRole("button", { name: "toggle" }).click());
-    expect(screen.getByTestId("theme")).toHaveTextContent("light");
+    expect(screen.getByTestId("theme")).toHaveTextContent("dark");
   });
 
   it("persists theme to localStorage", () => {
@@ -43,6 +43,6 @@ describe("ThemeProvider", () => {
       </ThemeProvider>
     );
     act(() => screen.getByRole("button", { name: "toggle" }).click());
-    expect(localStorage.getItem("theme")).toBe("light");
+    expect(localStorage.getItem("theme")).toBe("dark");
   });
 });
