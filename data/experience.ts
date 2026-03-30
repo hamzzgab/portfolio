@@ -14,11 +14,11 @@ export const experiences: Experience[] = [
     location: "Dublin, Ireland",
     bullets: [
       "Built 10+ Airflow DAGs processing 1.28B+ daily events across 400+ audience segments on AWS EMR.",
-      "Built multi-level segment evaluation in Flink — campaign/package/order targeting via DSP line cache and Java segment cache extensions.",
-      "Shipped Yahoo Standard Audiences GA — OpenSearch pipeline expanding user reach by 60%.",
+      "Built real-time multi-level ad targeting in Flink — evaluating campaigns at package and order granularity by extending the Java segment cache.",
+      "Shipped Yahoo Standard Audiences to production — built the OpenSearch rules pipeline improving 400+ audience definitions, expanding reach by 60%.",
       "Migrated 4 scoring systems to new infrastructure, cutting costs 13% and upgrading to EMR v7.",
-      "Designed segment reprocessing system recovering missed segments from 113K+ catalog with automated alerting.",
-      "Shipped geo-aware segmentation and authored impression-based scoring design over 554GB+ daily volumes.",
+      "Designed a reprocessing system to recover audience segments dropped by the hourly pipeline, covering 113K+ segments with health-check alerting.",
+      "Shipped geo-aware audience segmentation with country-level targeting. Authored system design for impression-based scoring processing 554GB+ daily.",
     ],
   },
   {
